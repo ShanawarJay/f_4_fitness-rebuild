@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           HistoryPage(),
           ExcercisePage(),
           HistoryPage(),
-          FABPage(),
+          DataPage(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
