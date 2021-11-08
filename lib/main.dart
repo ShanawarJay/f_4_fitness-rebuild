@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'MyBottonNavBar.dart';
 import 'FabButton.dart';
 import 'package:f_4_fitness/CustomIcon.dart';
@@ -8,8 +9,10 @@ import 'Excercise/excercise_page.dart';
 import 'Settings/settings_page.dart';
 import 'FAB/floating_button_page.dart';
 
+
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
+
 }
 
 class MyApp extends StatelessWidget {
@@ -22,6 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'F4Fitness Prototype'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -53,14 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        elevation: 0,
       ),
       body: IndexedStack(
         index: currentIndex,
         children: [
           UserPage(),
           HistoryPage(),
-          ExcercisePage(),
-          HistoryPage(),
+          Excercisepage(),
+          SettingPage(),
           DataPage(),
         ],
       ),
