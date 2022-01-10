@@ -18,25 +18,22 @@ class _DataPageState extends State<DataPage> {
     FabVariables(
         headingName: 'assets/Beginners.png',
         ex1: "Beginner",
+      noOfWorkout: 'No of workouts 5',
     ),
     FabVariables(
         headingName: 'assets/Intermidiate.jpg',
         ex1: 'Intermidiate',
+      noOfWorkout: 'No of workouts 5',
         ),
     FabVariables(
         headingName: 'assets/Advance_upgraded.png',
         ex1: 'Advance',
+      noOfWorkout: 'No of workouts 5',
         ),
     FabVariables(headingName: 'assets/Advance_resize.png',
         ex1: 'Cardio',
+      noOfWorkout: 'No of workouts 5',
         ),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
-    // FabVariables(headingName: '', ex1: '', ex2: '', ex3: '', ex4: '', ex5: ''),
   ];
 
   @override
@@ -79,7 +76,29 @@ class _DataPageState extends State<DataPage> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Row(
+
                         children: [
+                          Column(
+                            children: [
+                              Text(newtemplate.ex1, style: TextStyle(fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  letterSpacing: 2),),
+
+                              Text(newtemplate.noOfWorkout),
+
+                            ],
+                          ),
+                          // Text(newtemplate.ex1, style: TextStyle(fontSize: 25,
+                          //     fontWeight: FontWeight.bold,
+                          //     fontStyle: FontStyle.italic,
+                          //     letterSpacing: 2),),
+
+
+
+
+
+
                           CircleAvatar(
                             child: Image(
                               image: AssetImage(newtemplate.headingName),
@@ -88,24 +107,13 @@ class _DataPageState extends State<DataPage> {
                             radius: 70,
                             backgroundColor: Colors.white,
                           ),
-                          Text(newtemplate.ex1, style: TextStyle(fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic,
-                              letterSpacing: 2),),
+                          // Text(newtemplate.ex1, style: TextStyle(fontSize: 25,
+                          //     fontWeight: FontWeight.bold,
+                          //     fontStyle: FontStyle.italic,
+                          //     letterSpacing: 2),),
                         ],
                       ),
 
-                      //Text(newtemplate.headingName,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-                      // SizedBox(height: 10,),
-                      // Text(newtemplate.ex1,style: TextStyle(fontSize: 18),),
-                      // SizedBox(height: 5,),
-                      // Text(newtemplate.ex2,style: TextStyle(fontSize: 18),),
-                      // SizedBox(height: 5,),
-                      // Text(newtemplate.ex3,style: TextStyle(fontSize: 18),),
-                      // SizedBox(height: 5,),
-                      // Text(newtemplate.ex4,style: TextStyle(fontSize: 18),),
-                      // SizedBox(height: 5,),
-                      // Text(newtemplate.ex5,style: TextStyle(fontSize: 18),),
                     ],
                   ),
                 ),
